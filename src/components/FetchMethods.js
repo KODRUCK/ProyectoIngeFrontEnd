@@ -2,7 +2,7 @@ const getFetch = async (path) => {
     let response = await fetch(`${process.env.REACT_APP_API_URL}/${path}`);
     return await response.json();
 }
-const postFecth = async (path, body) => {
+const postFetch = async (path, body) => {
     let response = await fetch(`${process.env.REACT_APP_API_URL}/${path}`, {
         method: 'POST',
         headers: {
@@ -32,9 +32,10 @@ const deleteFetch = async (path) => {
     });
     return await response.json();
 }
-module.exports.fetchMethods = {
+export const fetchMethods = {
     getFetch,
-    postFecth,
+    postFetch,
     putFetch,
     deleteFetch
-}
+  };
+  

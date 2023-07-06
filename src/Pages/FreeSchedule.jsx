@@ -75,7 +75,7 @@ export const FreeSchedule = () => {
   };
 
   const book = () => {
-    fetchMethods.postFecth("citas/reservar", { barber: barber, startHour: startHour, endHour: endHour, date:fulldate }).then((res) => {
+    fetchMethods.postFetch("citas/reservar", { barber: barber, startHour: startHour, endHour: endHour, date:fulldate }).then((res) => {
         Swal.fire({
           title: 'Reservado correctamente',
           icon: 'success',

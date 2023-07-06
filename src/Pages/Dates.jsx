@@ -67,7 +67,7 @@ export const Dates = () => {
         setHour(hour);
     }
     const confirmDate = () => {
-        fetchMethods.postFecth("citas/", { email: log.email, barber: barber, client: log.idperson, hourid: idHour, date: fulldate, hairCut: hairCutT, hour: hour }).then((res) => {
+        fetchMethods.postFetch("citas/", { email: log.email, barber: barber, client: log.idperson, hourid: idHour, date: fulldate, hairCut: hairCutT, hour: hour }).then((res) => {
             Swal.fire({
                 position: 'top-center',
                 icon: 'success',

@@ -23,7 +23,7 @@ export const ChangePass = () => {
             })
             return;
         }
-       fetchMethods.postFecth("users/changePassword", { email: log.email, password: currentPassword,newPassword: newPassword  }).then((res) => {
+       fetchMethods.postFetch("users/changePassword", { email: log.email, password: currentPassword,newPassword: newPassword  }).then((res) => {
             console.log(res)
 
 

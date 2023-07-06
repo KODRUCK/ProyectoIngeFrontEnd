@@ -33,7 +33,7 @@ export const Login = () => {
 
     const handleLogin = () => {
 
-        fetchMethods.postFecth("users/login", { email: user, password: pass }).then((res) => {
+        fetchMethods.postFetch("users/login", { email: user, password: pass }).then((res) => {
             console.log(res)
 
 
@@ -72,7 +72,7 @@ export const Login = () => {
                 errores = errores + "\nLas contraseñas no coinciden \n"
             }
             if (errores.length <= 0) {
-                fetchMethods.postFecth("users/signup", { username: userName, email: email, password: password, confirmPassword: confirmPass, numberphone: numberphone }).then((res) => {
+                fetchMethods.postFetch("users/signup", { username: userName, email: email, password: password, confirmPassword: confirmPass, numberphone: numberphone }).then((res) => {
                     if (res.message === 'registrado') {
                         dispatch({ type: authTypes.login, role: "Normal", userName: userName, email: email, numberPhone: numberphone, idperson: res.data[0].idperson });
                         navigate("/AddNewDoc");
